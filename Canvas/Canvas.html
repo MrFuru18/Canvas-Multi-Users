@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<script src="draw.js"></script>
+<title>Canvas</title>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+    <h7 id="canvasId"></h7>
+
+    <div id="tools">
+        <div id="action_line_type">
+            <input type="radio" id="drag" name="line_type" value="drag" onchange="getRadioValue(this)" checked="checked">
+            <label for="line">linia</label><br>
+            <input type="radio" id="line" name="line_type" value="line" onchange="getRadioValue(this)">
+            <label for="line">prosta</label><br>
+            <input type="radio" id="rectangle" name="line_type" onchange="getRadioValue(this)" value="rectangle">
+            <label for="rectangle">prostokąt</label><br>
+            <input type="radio" id="circle" name="line_type" onchange="getRadioValue(this)" value="circle">
+            <label for="ellipse">okrąg</label>
+        </div>
+        <table>
+            <tr>
+                <td><label for="color">kolor: </label><input type="color" id="color"/></td>
+                <td><label for="lineWidth">szerokość: </label> </label><input type="range" id="lineWidth" min="1" max="10" step="1"/></td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+
+    <canvas id="surface"></canvas>
+
+	
+</body>
+</html>

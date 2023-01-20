@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Canvas</title>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+    <form id="form">
+        <h1>Wybierz Canvas</h1>
+
+        <div>
+            <label for="canvasId">ID Rysunku:</label><br>
+            <input id = canvasId type="text">
+        </div>
+        <br>
+        <div>
+            <button type="submit">Dołącz</button>
+        </div>
+        <br>
+    </form>
+
+	<script>
+        const form = document.getElementById("form");
+        const canvasId = document.getElementById("canvasId");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const canvasIdValue = canvasId.value;
+
+            localStorage.setItem("myObject", JSON.stringify({id: canvasIdValue}));
+
+            window.location.href = "Canvas.html";
+        })
+    </script>
+</body>
+</html>
